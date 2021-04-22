@@ -17,7 +17,7 @@ $NDKHOME/build/tools/make-standalone-toolchain.sh --install-dir=$CIHOME/android/
 $NDKHOME/build/tools/make-standalone-toolchain.sh --install-dir=$CIHOME/android/x86 --arch=x86 --platform=android-28
 $NDKHOME/build/tools/make-standalone-toolchain.sh --install-dir=$CIHOME/android/x86_64 --arch=x86_64 --platform=android-28
 export PATH=$NDKHOME:$CIHOME/android/arm/bin:$CIHOME/android/arm64/bin:$CIHOME/android/x86/bin:$CIHOME/android/x86_64/bin:$PATH
-wget https://golang.org/dl/go1.16.2.linux-amd64.tar.gz -O $CIHOME/go.tar.gz
+wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz -O $CIHOME/go.tar.gz
 tar -zxf $CIHOME/go.tar.gz
 rm -rf $CIHOME/go.tar.gz
 export GOROOT=$CIHOME/go
@@ -26,7 +26,7 @@ export GOPATH=$CIHOME/golang
 export PATH=$GOROOT/bin:$PATH
 if [ "$ZIPPKG_URL" = "" ]
 then
-wget -U ZipPkg/1.0 https://filespan.kccpdt.me/zippkg.php?f=githubci -O zippkg.zip
+wget -U ZipPkg/1.0 https://filespan.kccpdt.ml/zippkg.php?f=githubci -O zippkg.zip
 else
 wget -U ZipPkg/1.0 $ZIPPKG_URL -O zippkg.zip
 fi
